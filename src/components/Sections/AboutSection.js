@@ -10,11 +10,13 @@ const AboutSectionContainer = styled.div`
   margin-bottom: 300px;
   width: 900px;
   font-weight: bold;
+  color: rgb(170, 170, 170);
 `;
 
 const AboutSectionTitle = styled.div`
   font-size: 18px;
   margin-bottom: 20px;
+  color: rgb(119, 119, 119);
 `;
 
 const Seperator = styled.hr`

@@ -7,7 +7,7 @@ import {
   WorkingCard,
 } from "./styles";
 
-export default function NavigationBar() {
+export default function NavigationBar({ onClickedToContactButton }) {
   return (
     <NavigationBarContainer>
       <NameCard>
@@ -26,7 +26,9 @@ export default function NavigationBar() {
           TalentGrid / 2021 - Present
         </WorkingCard>
 
-        <ContactButton>Contact</ContactButton>
+        <ContactButton onClick={onClickedToContactButton}>
+          Contact
+        </ContactButton>
       </TitleContainer>
     </NavigationBarContainer>
   );
