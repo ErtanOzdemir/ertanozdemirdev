@@ -1,6 +1,12 @@
 import React from "react";
-import { LoadingContainer, PipeImage, TextContainer } from "./style";
+import {
+  LoadingContainer,
+  LoadingIconContainer,
+  PipeImage,
+  TextContainer,
+} from "./style";
 import Pipes from "../../../assests/images/pipes.png";
+import Loading from "../../../assests/images/loading.gif";
 export default function LoadingScreen() {
   return (
     <LoadingContainer>
@@ -10,6 +16,7 @@ export default function LoadingScreen() {
         scelerisque urna, nec eleifend lectus condimentum sed. Donec maximus
         purus in quam facilisis finibus."
       </TextContainer>
+      <LoadingIconContainer src={Loading}></LoadingIconContainer>
     </LoadingContainer>
   );
 }

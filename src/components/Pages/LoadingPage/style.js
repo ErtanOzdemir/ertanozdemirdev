@@ -35,3 +35,8 @@ export const TextContainer = styled.div`
   font-size: 18px;
   font-weight: 700;
 `;
+
+export const LoadingIconContainer = styled.img`
+  width: 25px;
+  margin-top: 20px;
+`;

@@ -1,5 +1,11 @@
 import React from "react";
-import { ContactButton, NameCard, NavigationBarContainer } from "./styles";
+import {
+  ContactButton,
+  NameCard,
+  NavigationBarContainer,
+  TitleContainer,
+  WorkingCard,
+} from "./styles";
 
 export default function NavigationBar() {
   return (
@@ -7,14 +13,21 @@ export default function NavigationBar() {
       <NameCard>
         <div
           style={{
-            fontSize: "26px",
+            fontSize: "25px",
           }}
         >
           Ertan
         </div>{" "}
         Özdemir
       </NameCard>
-      <ContactButton>Contact</ContactButton>
+      <TitleContainer>
+        <WorkingCard>
+          Web Developer <br />
+          TalentGrid / 2021 - Present
+        </WorkingCard>
+
+        <ContactButton>Contact</ContactButton>
+      </TitleContainer>
     </NavigationBarContainer>
   );
 }

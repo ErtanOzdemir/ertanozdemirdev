@@ -7,17 +7,26 @@ export const NavigationBarContainer = styled.div`
   padding-right: 50px;
   align-items: center;
   background-color: #1a181b;
-  border-bottom: 1px solid rgb(119, 119, 119);
   justify-content: space-between;
+  color: rgb(119, 119, 119);
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+`;
+
+export const WorkingCard = styled.div`
+  font-weight: 200;
 `;
 
 export const NameCard = styled.div`
   text-align: center;
-  color: rgb(119, 119, 119);
   font-weight: 700;
+  margin-right: -34%;
 `;
 
 export const ContactButton = styled.button`
+  margin-left: 30px;
   height: 40px;
   background-color: #1a181b;
   border: 1px solid rgb(119, 119, 119);
