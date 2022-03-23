@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const AboutSectionContainer = styled.div`
+const BlogSectionContainer = styled.div`
   cursor: default;
   text-align: center;
   color: rgb(119, 119, 119);
@@ -14,7 +14,7 @@ const AboutSectionContainer = styled.div`
   color: rgb(170, 170, 170);
 `;
 
-const AboutSectionTitle = styled.div`
+const BlogSectionTitle = styled.div`
   font-size: 18px;
   margin-bottom: 20px;
   color: rgb(119, 119, 119);
@@ -26,12 +26,12 @@ const Seperator = styled.hr`
   width: 60px;
 `;
 
-export default function AboutSection({ children, title }) {
+export default function Blogection({ children, title }) {
   return (
-    <AboutSectionContainer>
-      <AboutSectionTitle>{title}</AboutSectionTitle>
+    <BlogSectionContainer>
+      <BlogSectionTitle>{title}</BlogSectionTitle>
       {children}
       <Seperator />
-    </AboutSectionContainer>
+    </BlogSectionContainer>
   );
 }

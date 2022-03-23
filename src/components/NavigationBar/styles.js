@@ -35,4 +35,8 @@ export const ContactButton = styled.button`
   font-weight: 700;
   padding-left: 30px;
   padding-right: 30px;
+  &:hover {
+    background-color: rgb(119, 119, 119);
+    color: #1a181b;
+  }
 `;

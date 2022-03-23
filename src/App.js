@@ -6,6 +6,9 @@ import TechStackSection from "./components/Sections/TechStackSection";
 
 import styled from "styled-components";
 import { Highlight } from "./components/Common/CommonComponents";
+import Footer from "./components/Footer";
+import BlogSection from "./components/Sections/BlogSection";
+import { CloseIcon } from "./assests/Icon";
 
 const ContactModal = styled.div`
   position: fixed;
@@ -15,6 +18,14 @@ const ContactModal = styled.div`
   width: 300px;
   height: 150px;
   background-color: white;
+`;
+
+const DarkerBackground = styled.div`
+  background-color: rgb(26, 24, 27, 0.9);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 100%;
+  width: 100%;
 `;
 
 function App() {
@@ -36,54 +47,113 @@ function App() {
   }, []);
   return (
     <>
+      {isModalOpen && (
+        <DarkerBackground>
+          {/*<ContactModal />*/}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              paddingTop: "40px",
+              paddingRight: "40px",
+            }}
+          >
+            <div onClick={closeContactModal}>
+              <CloseIcon />
+            </div>
+          </div>
+          <div
+            style={{
+              position: "fixed",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <div
+              style={{
+                padding: "15px",
+                color: "white",
+                textAlign: "center",
+                fontSize: "50px",
+              }}
+            >
+              About
+            </div>
+            <div
+              style={{
+                padding: "15px",
+                textAlign: "center",
+                color: "white",
+                fontSize: "50px",
+              }}
+            >
+              GitHub
+            </div>
+            <div
+              style={{
+                padding: "15px",
+                textAlign: "center",
+                color: "white",
+                fontSize: "50px",
+              }}
+            >
+              Spotify
+            </div>
+          </div>
+        </DarkerBackground>
+      )}
       {loading && <LoadingScreen />}
       <NavigationBar
         onClickedToContactButton={openContactModal}
         onClickedToCloseContactButton={closeContactModal}
       />
-      {isModalOpen && <ContactModal />}
-      {!isModalOpen && (
-        <>
+      (
+      <>
+        <div
+          style={{
+            fontWeight: 900,
+            fontSize: "11.2vw",
+            fontStyle: "bold",
+            color: "rgb(119, 119, 119)",
+            paddingLeft: "50px",
+            paddingRight: "50px",
+          }}
+        >
+          FULL
+          <br />
+          STACK
+          <br />
+          {/* Hey, don't touch me! */}
           <div
             style={{
-              fontWeight: 900,
-              fontSize: "11.2vw",
-              fontStyle: "bold",
-              color: "rgb(119, 119, 119)",
-              paddingLeft: "50px",
-              paddingRight: "50px",
+              paddingLeft: "15px",
+              paddingRight: "15px",
+              border: "solid 1px",
+              display: "inline",
+              borderRadius: "10px",
             }}
           >
-            FULL
-            <br />
-            STACK
-            <br />
-            {/* Hey, don't touch me! */}
-            <div
-              style={{
-                paddingLeft: "15px",
-                paddingRight: "15px",
-                border: "solid 1px",
-                borderLeftColor: "rgb(119, 119, 119)",
-                display: "inline",
-                borderRadius: "10px",
-              }}
-            >
-              DEVELOPER
-            </div>
+            DEVELOPER
           </div>
-          <AboutSection title={"About"}>
-            Hi, I am Ertan. I interested in web. I can use{" "}
-            <Highlight>JavaScript</Highlight>,{" "}
-            <Highlight>React Library </Highlight>
-            for developing web applications and I am also learning
-            <Highlight> Node.js</Highlight> - <Highlight>Express.js</Highlight>{" "}
-            and <Highlight>GraphQL</Highlight> to develop back-end applications.
-          </AboutSection>
+        </div>
+        <AboutSection title={"About"}>
+          Hi, I am Ertan. I interested in web. I can use{" "}
+          <Highlight>JavaScript</Highlight>,{" "}
+          <Highlight>React Library </Highlight>
+          for developing web applications and I am also learning
+          <Highlight> Node.js</Highlight> - <Highlight>Express.js</Highlight>{" "}
+          and <Highlight>GraphQL</Highlight> to develop back-end applications.
+        </AboutSection>
 
-          <TechStackSection title={"Tech Stack"} />
-        </>
-      )}
+        <TechStackSection title={"Tech Stack"} />
+        <BlogSection>
+          I also write blog posts on <Highlight>Medium</Highlight> and{" "}
+          <Highlight>Hashnode</Highlight> about coding and algorithms.
+        </BlogSection>
+        <Footer></Footer>
+      </>
+      )
     </>
   );
 }

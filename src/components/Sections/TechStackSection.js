@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import JavaScript from "../../assests/images/javascript.png";
-import Reactjs from "../../assests/images/reactjs.png";
-import Nodejs from "../../assests/images/nodejs.png";
-import Graphql from "../../assests/images/graphql.png";
-import NPM from "../../assests/images/npm.png";
+// import JavaScript from "../../assests/images/javascript.png";
+// import Reactjs from "../../assests/images/reactjs.png";
+// import Nodejs from "../../assests/images/nodejs.png";
+// import Graphql from "../../assests/images/graphql.png";
+// import NPM from "../../assests/images/npm.png";
 import {
   ExpressjsIcon,
   GraphqlIcon,
-  HtmlIcon,
   JavascriptIcon,
   JestIcon,
   MongoDBIcon,
@@ -19,17 +18,17 @@ import {
 
 const TechStackContainer = styled.div`
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
   margin-left: 25%;
   margin-right: 25%;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   justify-items: center;
   align-items: center;
 `;
 
-const TechLogo = styled.img`
-  width: 150px;
-`;
+// const TechLogo = styled.img`
+//   width: 150px;
+// `;
 
 const TechStackTitle = styled.h1`
   text-align: center;
@@ -84,7 +83,6 @@ export default function TechStackSection({ title }) {
         <GraphqlIcon />
         <MongoDBIcon />
         <NpmIcon />
-        <HtmlIcon />
       </TechStackContainer>
     </>
   );
