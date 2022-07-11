@@ -13,7 +13,7 @@ export default function NavigationBar({ onClickedToContactButton }) {
       <NameCard>
         <div
           style={{
-            fontSize: "25px",
+            fontSize: "45px",
           }}
         >
           Ertan
