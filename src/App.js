@@ -5,7 +5,7 @@ import AboutSection from "./components/Sections/AboutSection";
 import TechStackSection from "./components/Sections/TechStackSection";
 
 import styled from "styled-components";
-import { Highlight } from "./components/Common/CommonComponents";
+import { Highlight, Link } from "./components/Common/CommonComponents";
 import Footer from "./components/Footer";
 import BlogSection from "./components/Sections/BlogSection";
 import { CloseIcon } from "./assests/Icon";
@@ -112,6 +112,7 @@ function App() {
       <>
         <div
           style={{
+            height: "100%",
             fontWeight: 900,
             fontSize: "11.2vw",
             fontStyle: "bold",
@@ -148,8 +149,15 @@ function App() {
 
         <TechStackSection title={"Tech Stack"} />
         <BlogSection>
-          I also write blog posts on <Highlight>Medium</Highlight> and{" "}
-          <Highlight>Hashnode</Highlight> about coding and algorithms.
+          I also write blog posts on{" "}
+          <Link href='https://ozdemirertan.medium.com/' target='_blank'>
+            Medium
+          </Link>{" "}
+          and{" "}
+          <Link href='https://dev.to/ertanozdemir' target='_blank'>
+            dev.to
+          </Link>{" "}
+          about coding and algorithms.
         </BlogSection>
         <Footer></Footer>
       </>

@@ -7,3 +7,12 @@ export const Highlight = styled.span`
     cursor: pointer;
   }
 `;
+
+export const Link = styled.a`
+  color: rgb(119, 119, 119);
+  text-decoration: none;
+  &:hover {
+    color: #f14a16;
+    cursor: pointer;
+  }
+`;
