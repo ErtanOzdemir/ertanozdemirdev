@@ -141,7 +141,7 @@ function App() {
         <AboutSection title={"About"}>
           Hi, I am Ertan. I interested in web. I can use{" "}
           <Highlight>JavaScript</Highlight>,{" "}
-          <Highlight>React Library </Highlight>
+          <Highlight>React.js </Highlight>
           for developing web applications and I am also learning
           <Highlight> Node.js</Highlight> - <Highlight>Express.js</Highlight>{" "}
           and <Highlight>GraphQL</Highlight> to develop back-end applications.
