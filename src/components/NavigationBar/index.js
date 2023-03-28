@@ -1,16 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Menu from "../Menu/Menu";
-import {
-  ContactButton,
-  NameCard,
-  NavigationBarContainer,
-  TitleContainer,
-  WorkingCard,
-} from "./styles";
+import { ContactButton, NameCard, NavigationBarContainer } from "./styles";
 
-export default function NavigationBar({}) {
+export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   const openMenu = () => {
     setIsMenuOpen(true);
   };
@@ -22,7 +17,7 @@ export default function NavigationBar({}) {
     <>
       <Menu isOpen={isMenuOpen} onMenuClose={closeMenu} />
       <NavigationBarContainer>
-        <NameCard>Ertan Özdemir</NameCard>
+        <NameCard onClick={() => navigate("/")}>Ertan Özdemir</NameCard>
 
         <ContactButton onClick={openMenu}>Menu</ContactButton>
       </NavigationBarContainer>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import LoadingScreen from "./LoadingPage";
-import { Highlight, Link } from "../components/Common/CommonComponents";
-import PageWithNavBar from "../components/Template/PageWithNavBar";
-import Section from "../components/Main/Section";
+import LoadingScreen from "../LoadingPage";
+import { Highlight, Link } from "../../components/Common/CommonComponents";
+import PageWithNavBar from "../../components/Template/PageWithNavBar";
+import Section from "../../components/Main/Section";
 import {
   ExpressjsIcon,
   GraphqlIcon,
@@ -13,7 +13,7 @@ import {
   NodejsIcon,
   NpmIcon,
   ReactIcon,
-} from "../assests/Icon";
+} from "../../assests/Icon";
 
 const TechStackContainer = styled.div`
   display: grid;
@@ -25,12 +25,7 @@ const TechStackContainer = styled.div`
     grid-template: 1fr 1fr / 1fr 1fr;
   }
 `;
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+
 function MainPage() {
   const [loading, setLoading] = useState(true);
 
@@ -45,13 +40,13 @@ function MainPage() {
       <PageWithNavBar>
         <Section
           sectionContainerStyle={{
-            minHeight: "100vh",
+            minHeight: "calc(100vh-90px)",
+            "@media (max-width: 768px)": { minHeight: "initial" },
           }}
           isSeperatorExists={false}
         >
           <div
             style={{
-              height: "100%",
               fontWeight: 900,
               fontSize: "11.2vw",
               fontStyle: "bold",

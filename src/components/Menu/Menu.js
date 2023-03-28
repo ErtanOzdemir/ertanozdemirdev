@@ -16,13 +16,22 @@ const MenuItem = styled.div`
   color: white;
   text-align: center;
   font-size: 50px;
+  cursor: pointer;
 `;
 
 export default function Menu({ isOpen, onMenuClose }) {
   const navigate = useNavigate();
 
-  const handleNavigate = ({ to }) => {
+  const handleNavigate = ({ to, externalTo }) => {
+    if (externalTo) {
+      return window.open(
+        "https://github.com/ErtanOzdemir",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
     navigate(to);
+    onMenuClose();
   };
 
   return (
@@ -49,12 +58,23 @@ export default function Menu({ isOpen, onMenuClose }) {
               transform: "translate(-50%, -50%)",
             }}
           >
-            <MenuItem onClick={() => handleNavigate("/about")}>About</MenuItem>
-            <MenuItem onClick={() => handleNavigate("/github")}>
+            <MenuItem onClick={() => handleNavigate({ to: "/" })}>
+              Home
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate({ to: "/about" })}>
+              Me
+            </MenuItem>
+            <MenuItem onClick={() => handleNavigate({ externalTo: "/github" })}>
               GitHub
             </MenuItem>
-            <MenuItem onClick={() => handleNavigate("/spotify")}>
-              Spotify
+            <MenuItem
+              onClick={() =>
+                handleNavigate({
+                  externalTo: "https://www.linkedin.com/in/ertanozdemir/",
+                })
+              }
+            >
+              LinkedIn
             </MenuItem>
           </div>
         </DarkerBackground>

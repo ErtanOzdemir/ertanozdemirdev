@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Highlight } from "../Common/CommonComponents";
 
 const FooterContainer = styled.footer`
+  bottom: 0;
   display: flex;
   bottom: 0px;
   color: rgb(170, 170, 170);
