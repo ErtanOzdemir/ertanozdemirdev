@@ -21,8 +21,12 @@ export const WorkingCard = styled.div`
 
 export const NameCard = styled.div`
   text-align: center;
+  font-size: 30px;
   font-weight: 700;
   margin-right: -34%;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const ContactButton = styled.button`

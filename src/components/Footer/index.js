@@ -8,6 +8,10 @@ const FooterContainer = styled.footer`
   color: rgb(170, 170, 170);
   padding: 70px;
   padding-left: 50px;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const DateTime = styled.div`

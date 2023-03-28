@@ -1,20 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const AboutSectionContainer = styled.div`
+const SectionContainer = styled.div`
   cursor: default;
+  height: 100%;
+  width: 100%;
   text-align: center;
   color: rgb(119, 119, 119);
-  margin: auto;
   font-size: 30px;
-  margin-top: 300px;
-  margin-bottom: 300px;
-  width: 900px;
   font-weight: bold;
   color: rgb(170, 170, 170);
+  margin-bottom: 150px;
 `;
 
-const AboutSectionTitle = styled.div`
+const SectionTitle = styled.div`
   font-size: 18px;
   margin-bottom: 20px;
   color: rgb(119, 119, 119);
@@ -26,12 +25,17 @@ const Seperator = styled.hr`
   width: 60px;
 `;
 
-export default function AboutSection({ children, title }) {
+export default function Section({
+  title,
+  isSeperatorExists = true,
+  children,
+  sectionContainerStyle,
+}) {
   return (
-    <AboutSectionContainer>
-      <AboutSectionTitle>{title}</AboutSectionTitle>
+    <SectionContainer style={sectionContainerStyle}>
+      {title && <SectionTitle>{title}</SectionTitle>}
       {children}
-      <Seperator />
-    </AboutSectionContainer>
+      {isSeperatorExists && <Seperator />}
+    </SectionContainer>
   );
 }

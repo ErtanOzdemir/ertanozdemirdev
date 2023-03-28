@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Menu from "../Menu/Menu";
 import {
   ContactButton,
   NameCard,
@@ -7,29 +8,24 @@ import {
   WorkingCard,
 } from "./styles";
 
-export default function NavigationBar({ onClickedToContactButton }) {
-  return (
-    <NavigationBarContainer>
-      <NameCard>
-        <div
-          style={{
-            fontSize: "45px",
-          }}
-        >
-          Ertan
-        </div>{" "}
-        Özdemir
-      </NameCard>
-      <TitleContainer>
-        <WorkingCard>
-          Web Developer <br />
-          TalentGrid / 2021 - Present
-        </WorkingCard>
+export default function NavigationBar({}) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <ContactButton onClick={onClickedToContactButton}>
-          Contact
-        </ContactButton>
-      </TitleContainer>
-    </NavigationBarContainer>
+  const openMenu = () => {
+    setIsMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+  return (
+    <>
+      <Menu isOpen={isMenuOpen} onMenuClose={closeMenu} />
+      <NavigationBarContainer>
+        <NameCard>Ertan Özdemir</NameCard>
+
+        <ContactButton onClick={openMenu}>Menu</ContactButton>
+      </NavigationBarContainer>
+    </>
   );
 }

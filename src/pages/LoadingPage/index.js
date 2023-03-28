@@ -5,8 +5,9 @@ import {
   PipeImage,
   TextContainer,
 } from "./style";
-import Pipes from "../../../assests/images/pipes.png";
-import Loading from "../../../assests/images/loading.gif";
+
+import Pipes from "../../assests/images/pipes.png";
+import Loading from "../../assests/images/loading.gif";
 export default function LoadingScreen() {
   return (
     <LoadingContainer>
