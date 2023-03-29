@@ -85,14 +85,14 @@ export default function AboutPage() {
           <Description>
             As a web developer, I develop both backend and frontend
             applications. The technologies I generally use are{" "}
-            <Highlight>Node.js</Highlight>,<Highlight>React.js</Highlight>,{" "}
+            <Highlight>Node.js</Highlight>, <Highlight>React.js</Highlight>,{" "}
             <Highlight>GraphQL</Highlight>. Besides these, I have also worked on
             different technologies such as <Highlight>web scraping</Highlight>,{" "}
             <Highlight>websocket</Highlight>,{" "}
-            <Highlight>Chrome Extension</Highlight>
-            applications, <Highlight>RabbitMQ</Highlight>,{" "}
-            <Highlight>REST APIs</Highlight>. As you can understand, I am trying
-            to specialize in mostly <Highlight>JavaScript</Highlight>.
+            <Highlight>Chrome Extension</Highlight> applications,{" "}
+            <Highlight>RabbitMQ</Highlight>, <Highlight>REST APIs</Highlight>.
+            As you can understand, I am trying to specialize in mostly{" "}
+            <Highlight>JavaScript</Highlight>.
           </Description>
         </div>
         <Image onClick={handleSoundEvents} src={ProfilePicture} />
