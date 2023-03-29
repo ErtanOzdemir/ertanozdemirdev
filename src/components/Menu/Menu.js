@@ -24,11 +24,7 @@ export default function Menu({ isOpen, onMenuClose }) {
 
   const handleNavigate = ({ to, externalTo }) => {
     if (externalTo) {
-      return window.open(
-        "https://github.com/ErtanOzdemir",
-        "_blank",
-        "noopener,noreferrer"
-      );
+      return window.open(externalTo, "_blank", "noopener,noreferrer");
     }
     navigate(to);
     onMenuClose();
@@ -64,7 +60,13 @@ export default function Menu({ isOpen, onMenuClose }) {
             <MenuItem onClick={() => handleNavigate({ to: "/about" })}>
               Me
             </MenuItem>
-            <MenuItem onClick={() => handleNavigate({ externalTo: "/github" })}>
+            <MenuItem
+              onClick={() =>
+                handleNavigate({
+                  externalTo: "https://github.com/ErtanOzdemir/",
+                })
+              }
+            >
               GitHub
             </MenuItem>
             <MenuItem
