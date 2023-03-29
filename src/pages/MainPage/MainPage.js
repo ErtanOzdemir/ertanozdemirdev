@@ -72,9 +72,9 @@ function MainPage() {
           </div>
         </Section>
         <Section title={"About"}>
-          Hi, I am Ertan. I interested in web. I can use{" "}
+          Hi, I am Ertan. I am interested in the web. I can use{" "}
           <Highlight>JavaScript</Highlight>, <Highlight>React.js </Highlight>
-          for developing web applications and I am also learning
+          for developing web applications, and I am also learning
           <Highlight> Node.js</Highlight> - <Highlight>Express.js</Highlight>{" "}
           and <Highlight>GraphQL</Highlight> to develop back-end applications.
         </Section>
